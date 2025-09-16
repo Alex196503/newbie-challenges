@@ -4,128 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: hsl(204, 43%, 93%);
-            color:white;
-            font-size:16px;
-            font-family: 'Karla', sans-serif;
-            line-height: 1.4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container{
-            display: grid;
-            grid-template-areas:'box1 box1' 'box2 box3';
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: auto auto;
-            height:370px;
-            width:590px;
-            background-color: white;
-            color:black;
-            border-radius: 10px 9px 8px 7px;
-            box-shadow: 2px 3px 23px rgb(182, 175, 175);
-        }
-        .box1{
-            grid-area:box1;
-            background-color:white;
-            height:90px;
-            width: auto;
-        }
-        .box1>h1{
-          color:hsl(179, 62%, 43%);
-          font-size: 1.2em;
-            margin:25px 0 3px 31px;
-            font-weight: 700;
-        }
-        .box1>h3{
-            margin:13px 0px 20px 28px;
-            color:hsl(71, 73%, 54%);
-            font-size:0.95em;
-        }
-        .box1>p{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image:url('bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-color:hsl(257, 40%, 49%);
+        color:white;
+        line-height: 1.2;
+        font-size:16px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .header{
+        width:auto;
+        height: 160px;
+    }
+    .imagista{
+        position: relative;
+        bottom:20px;
+        margin:2px 0px 10px 42px;
+        padding-block: 13px 25px;
+        width:190px;
+        height: 195px;
+    }
+    .container{
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-areas: 'a b';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .box1{
+        grid-area: a;
+        width: auto;
+        height: auto;
+        border-radius: 20px 20px;
+    }
+    .imag{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin:0px 9px 12px 17px;
+        padding:14px 28px;
+
+    }
+    .box2{
+        grid-area:b;
+        width: auto;
+        height: auto;
+    }
+    .box2>h1{
+        font-family: 'Open Sans', sans-serif;
+        font-size:2.1em;
+        padding:12px 20px;
+        word-spacing: 4px;
+        margin:50px 10px 12px 6px;
+        line-height: 1.5;
+    }
+    .box2>p{
+        font-family: 'Open Sans', sans-serif;
+        font-size:1.1em;
+        padding:5px 16px;
+        word-spacing: 2px;
+        line-height: 1.5;
+        margin:5px 10px 18px 12px;
+        font-weight: normal;
+    }
+    button{
+        background-color: white;
+        color:hsl(257, 40%, 49%);
+        font-size:15px;
+        border: none;
+        cursor: pointer;
+        margin-left:20px;
+        border-radius: 30px;
+        box-shadow: 3px 4px 6px rgb(99, 98, 98);
+        padding:14px 52px;
+        font-weight: normal;
+    }
+    
+    i{  display: inline-flex;
+        justify-content: center;
+        align-items: center;
+              border-radius: 50%;
+        padding:7px 16px;
+        border:2px solid white;
+        font-size:14px;
         
-            font-size:0.85em;
-            color:hsl(218, 22%, 67%);
-            margin:0px 39px 9px 27px;
-        }
-        .box2{
-            background-color: hsl(179, 62%, 43%);
-            grid-area:box2;
-            width:295px;
-            border-radius: 3px;
-            border:1px solid rgb(186, 181, 181);
-        }
-        .box2>h1{
-            color:white;
-            font-size: 0.9em;
-            margin:26px 0px 5px 27px;
-            font-weight: 700;
-        }
-        .p1{
-           
-            margin:5px 0px 15px 27px;
-        }
-        .par{
-            
-            color:white;
-            margin:2px 9px 10px 27px;
-            font-size: 0.8em;
-            position: relative;
-            bottom:10px;
-        }
-        button{
-            
-            border:none;
-            margin:4px 1px 2px 26px;
-            cursor: pointer;
-            font-weight: bold;
-            background-color: hsl(71, 73%, 54%);
-            color:white;
-            padding:14px 75px;
-            border-radius: 6px;
-            box-shadow: 2px 4px 12px rgb(117, 112, 112) ;
-        }
-        .box3{
-            grid-area:box3;
-            background-color: hsl(179, 55%, 47%);
-            opacity:0.7;
-            width:295px;
-            height: 207px;
-            border-radius: 3px;
-        }
-        .box3>h1{           
-            color:white;
-            font-size:1em;
-            margin:28px 0px 10px 24px;
-        }
-        .box3>ul{
-            list-style-type: none;
-            margin:10px 0 20px 25px;
-            color:white;
-            line-height: 1.5;
-            font-size:0.7em;
-        }
- @media(max-width:760px)
- {
+    }
+    footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 40px;
+    }
+    .footerista{
+        display: flex;
+        gap:15px;
+        width: 300px;
+        max-width: 100%;
+    }
+    button:hover{
+        background-color: hsl(300, 69%, 71%);
+    }
+    .fa-brands.fa-twitter:hover{
+        cursor: pointer;
+        color: rgb(238, 64, 151);
+        border:2px solid rgb(238, 64, 151);
+    }
+  @media(max-width:750px)
+  {
     body{
         min-height: 100vh;
+        width: auto;
     }
     .container{
         display: grid;
-        grid-template-areas: 'a' 'b' 'c';
-        grid-template-rows:auto auto auto;
-        grid-template-columns: 1fr;
-        width:70vw;
-        height:90vh;
+        grid-template-areas: 'a' 'b';
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        height:auto;
+        width:100%;
+        max-width: 100%;
     }
     .box1{
         grid-area: a;
@@ -133,47 +144,62 @@
     .box2{
         grid-area: b;
     }
-    .box3{
-        grid-area: c;
+    .box2>h1{
+        margin-left:50px;
     }
-    .box1, .box2, .box3{
-        width:100%;
-        height:auto;
+    .box2>p{
+        word-spacing: normal;
+        position: relative;
+        letter-spacing: normal;
+        bottom:15px;
+        margin-left:58px;
+        font-size:0.95em;
     }
+    button{
+        margin-left:99px;
+        padding:14px 80px;
+    }
+    .box1, .box2{
+        width: 100%;
+        height: auto;
+    }
+    .footer{
+        display: flex;
+        min-height: 10vh;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 86px;
+    }
+  }
+</style>
     
- }  
-    </style>
 </head>
 <body>
-    <main>
-        <div class="container">
-            <div class="box1">
-                <h1>Join our community</h1>
-              <h3>30-day, hassle-free money back guarantee</h3>
-            <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills. </p>
-            </div>
-            <div class="box2">
-                <h1>
-                   Monthly Subscription 
-                </h1>
-               <p class="p1"> <span style="color:white; font-weight: bold; font-size:28px; margin-right:10px;">$29</span> <span style="color:hsl(214, 9%, 84%); font-weight: normal; font-size:11px; position: relative; bottom:5px;">per month </span> </p>
-               <p class="par"> Full access for less than $1 a day</p>
-                       <button type="button">Sign Up</button>  
-            </div>
-            <div class="box3">
-                <h1>Why Us</h1>
-                <ul>
-                    <li>Tutorials by industry experts</li>
-                    <li>Peer &expert code review</li>
-                    <li>Coding exercises</li>
-                    <li>Access to our GitHub repos</li>
-                    <li>Community forum</li>
-                    <li>Flashcard decks</li>
-                    <li>New videos every week</li>
-                </ul>
-            
-            </div>
+<header class="header">
+    <img class="imagista" src="logo.svg" alt="Image with logo">
+</header>    
+<main class="container">
+    <div class="box1">
+        <figure>
+            <img class="imag" src="illustration-mockups.svg" alt="Image with mockup">
+        </figure>
+    </div>
+    <div class="box2">
+        <h1>Build The Community <br>
+             Your Fans Will Love </h1>
+        <p>Huddle re-imagines the way we build communities. You have
+            a voice, but so does your audience. Create connections with
+            your users as you engage in genuine discussion.</p>
+    <button type="button">Register!</button>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footerista">
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
         </div>
-    </main>
+</footer>
 </body>
 </html>
