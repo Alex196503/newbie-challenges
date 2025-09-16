@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: hsl(204, 43%, 93%);
+            color:white;
+            font-size:16px;
+            font-family: 'Karla', sans-serif;
+            line-height: 1.4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            display: grid;
+            grid-template-areas:'box1 box1' 'box2 box3';
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: auto auto;
+            height:370px;
+            width:590px;
+            background-color: white;
+            color:black;
+            border-radius: 10px 9px 8px 7px;
+            box-shadow: 2px 3px 23px rgb(182, 175, 175);
+        }
+        .box1{
+            grid-area:box1;
+            background-color:white;
+            height:90px;
+            width: auto;
+        }
+        .box1>h1{
+          color:hsl(179, 62%, 43%);
+          font-size: 1.2em;
+            margin:25px 0 3px 31px;
+            font-weight: 700;
+        }
+        .box1>h3{
+            margin:13px 0px 20px 28px;
+            color:hsl(71, 73%, 54%);
+            font-size:0.95em;
+        }
+        .box1>p{
+        
+            font-size:0.85em;
+            color:hsl(218, 22%, 67%);
+            margin:0px 39px 9px 27px;
+        }
+        .box2{
+            background-color: hsl(179, 62%, 43%);
+            grid-area:box2;
+            width:295px;
+            border-radius: 3px;
+            border:1px solid rgb(186, 181, 181);
+        }
+        .box2>h1{
+            color:white;
+            font-size: 0.9em;
+            margin:26px 0px 5px 27px;
+            font-weight: 700;
+        }
+        .p1{
+           
+            margin:5px 0px 15px 27px;
+        }
+        .par{
+            
+            color:white;
+            margin:2px 9px 10px 27px;
+            font-size: 0.8em;
+            position: relative;
+            bottom:10px;
+        }
+        button{
+            
+            border:none;
+            margin:4px 1px 2px 26px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: hsl(71, 73%, 54%);
+            color:white;
+            padding:14px 75px;
+            border-radius: 6px;
+            box-shadow: 2px 4px 12px rgb(117, 112, 112) ;
+        }
+        .box3{
+            grid-area:box3;
+            background-color: hsl(179, 55%, 47%);
+            opacity:0.7;
+            width:295px;
+            height: 207px;
+            border-radius: 3px;
+        }
+        .box3>h1{           
+            color:white;
+            font-size:1em;
+            margin:28px 0px 10px 24px;
+        }
+        .box3>ul{
+            list-style-type: none;
+            margin:10px 0 20px 25px;
+            color:white;
+            line-height: 1.5;
+            font-size:0.7em;
+        }
+ @media(max-width:760px)
+ {
+    body{
+        min-height: 100vh;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 'a' 'b' 'c';
+        grid-template-rows:auto auto auto;
+        grid-template-columns: 1fr;
+        width:70vw;
+        height:90vh;
+    }
+    .box1{
+        grid-area: a;
+    }
+    .box2{
+        grid-area: b;
+    }
+    .box3{
+        grid-area: c;
+    }
+    .box1, .box2, .box3{
+        width:100%;
+        height:auto;
+    }
+    
+ }  
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="box1">
+                <h1>Join our community</h1>
+              <h3>30-day, hassle-free money back guarantee</h3>
+            <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills. </p>
+            </div>
+            <div class="box2">
+                <h1>
+                   Monthly Subscription 
+                </h1>
+               <p class="p1"> <span style="color:white; font-weight: bold; font-size:28px; margin-right:10px;">$29</span> <span style="color:hsl(214, 9%, 84%); font-weight: normal; font-size:11px; position: relative; bottom:5px;">per month </span> </p>
+               <p class="par"> Full access for less than $1 a day</p>
+                       <button type="button">Sign Up</button>  
+            </div>
+            <div class="box3">
+                <h1>Why Us</h1>
+                <ul>
+                    <li>Tutorials by industry experts</li>
+                    <li>Peer &expert code review</li>
+                    <li>Coding exercises</li>
+                    <li>Access to our GitHub repos</li>
+                    <li>Community forum</li>
+                    <li>Flashcard decks</li>
+                    <li>New videos every week</li>
+                </ul>
+            
+            </div>
+        </div>
+    </main>
+</body>
+</html>
