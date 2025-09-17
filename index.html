@@ -4,202 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League Spartan">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-<style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing: border-box;
-    }
-    body{
-        background-image:url('bg-desktop.svg');
-        background-repeat: no-repeat;
-        background-color:hsl(257, 40%, 49%);
-        color:white;
-        line-height: 1.2;
-        font-size:16px;
-        font-family: 'Poppins', sans-serif;
-    }
-    .header{
-        width:auto;
-        height: 160px;
-    }
-    .imagista{
-        position: relative;
-        bottom:20px;
-        margin:2px 0px 10px 42px;
-        padding-block: 13px 25px;
-        width:190px;
-        height: 195px;
-    }
-    .container{
-        width: auto;
-        height: auto;
-        display: grid;
-        grid-template-areas: 'a b';
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-    .box1{
-        grid-area: a;
-        width: auto;
-        height: auto;
-        border-radius: 20px 20px;
-    }
-    .imag{
-        width: 100%;
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
-        object-fit: cover;
-        border-radius: 10px;
-        margin:0px 9px 12px 17px;
-        padding:14px 28px;
-
-    }
-    .box2{
-        grid-area:b;
-        width: auto;
-        height: auto;
-    }
-    .box2>h1{
-        font-family: 'Open Sans', sans-serif;
-        font-size:2.1em;
-        padding:12px 20px;
-        word-spacing: 4px;
-        margin:50px 10px 12px 6px;
-        line-height: 1.5;
-    }
-    .box2>p{
-        font-family: 'Open Sans', sans-serif;
-        font-size:1.1em;
-        padding:5px 16px;
-        word-spacing: 2px;
-        line-height: 1.5;
-        margin:5px 10px 18px 12px;
-        font-weight: normal;
-    }
-    button{
-        background-color: white;
-        color:hsl(257, 40%, 49%);
-        font-size:15px;
-        border: none;
-        cursor: pointer;
-        margin-left:20px;
-        border-radius: 30px;
-        box-shadow: 3px 4px 6px rgb(99, 98, 98);
-        padding:14px 52px;
-        font-weight: normal;
-    }
-    
-    i{  display: inline-flex;
-        justify-content: center;
-        align-items: center;
-              border-radius: 50%;
-        padding:7px 16px;
-        border:2px solid white;
-        font-size:14px;
-        
-    }
-    footer{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-bottom: 40px;
-    }
-    .footerista{
-        display: flex;
-        gap:15px;
-        width: 300px;
-        max-width: 100%;
-    }
-    button:hover{
-        background-color: hsl(300, 69%, 71%);
-    }
-    .fa-brands.fa-twitter:hover{
-        cursor: pointer;
-        color: rgb(238, 64, 151);
-        border:2px solid rgb(238, 64, 151);
-    }
-  @media(max-width:750px)
-  {
-    body{
-        min-height: 100vh;
-        width: auto;
-    }
-    .container{
-        display: grid;
-        grid-template-areas: 'a' 'b';
-        grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr;
-        height:auto;
-        width:100%;
-        max-width: 100%;
-    }
-    .box1{
-        grid-area: a;
-    }
-    .box2{
-        grid-area: b;
-    }
-    .box2>h1{
-        margin-left:50px;
-    }
-    .box2>p{
-        word-spacing: normal;
-        position: relative;
-        letter-spacing: normal;
-        bottom:15px;
-        margin-left:58px;
-        font-size:0.95em;
-    }
-    button{
-        margin-left:99px;
-        padding:14px 80px;
-    }
-    .box1, .box2{
-        width: 100%;
-        height: auto;
-    }
-    .footer{
-        display: flex;
-        min-height: 10vh;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        margin-left: 86px;
-    }
-  }
-</style>
-    
+    <link rel="stylesheet" href="mystyles.css">
 </head>
 <body>
-<header class="header">
-    <img class="imagista" src="logo.svg" alt="Image with logo">
-</header>    
-<main class="container">
-    <div class="box1">
-        <figure>
-            <img class="imag" src="illustration-mockups.svg" alt="Image with mockup">
-        </figure>
-    </div>
-    <div class="box2">
-        <h1>Build The Community <br>
-             Your Fans Will Love </h1>
-        <p>Huddle re-imagines the way we build communities. You have
-            a voice, but so does your audience. Create connections with
-            your users as you engage in genuine discussion.</p>
-    <button type="button">Register!</button>
-    </div>
-</main>
-<footer class="footer">
-    <div class="footerista">
-    <i class="fa-brands fa-facebook-f"></i>
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-instagram"></i>
-        </div>
-</footer>
+    <main class="main">
+        <header class="header">
+            <div class="box1">
+                <h1>10,000+ of our 
+                    <br>
+                    users love our
+                    <br>
+                     products.</h1>
+                <p>We only provide great products combined with excellent
+                    <br>
+                    customer service. See what our satisfied customers are 
+                    <br>
+                    saying about our services.</p>
+            </div>
+            <div class="box2">
+                <div class="box21">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i style="margin-right: 24px;" class="fa-solid fa-star"></i>
+                    <h3> Rated 5 Stars in Reviews</h3>
+                </div>
+                <div class="box22">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>                    
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Rated 5 Stars in Report Guru </h3>
+                </div>
+                <div class="box23">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>                    
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Rated 5 Stars in BestTech</h3>
+                    </div>
+            </div>
+        </header>
+        <article class="container">
+            <div class="container1">
+                <figure>
+                <img class="firstimage" src="image-colton.jpg" alt="Avatar with Colton">
+                </figure>
+                <h2 class="h2ulet">Colton Smith</h2>
+                <h3 class="h3ulet">Verified Vuyer</h3>
+                <p class="paragraf">"We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos vero autem voluptatum in, repellendus architecto, possimus deserunt repudiandae ab officiis exercitationem consequatur odio numquam nostrum accusantium natus debitis voluptates eligendi!</p>
+                
+            </div>
+            <br>
+            <div class="container2">
+                <figure>
+                    <img class="img2" src="image-irene.jpg" alt="Avatar with Irene">
+                    </figure>
+                    <h2 class="h2">Irene Roberts</h2>
+                    <h3 class="h3">Verified Buyer</h3>
+                    <p class="p">"Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery." Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, necessitatibus dolorem. Maiores, accusantium natus eligendi minus architecto quae nisi debitis quidem officia reprehenderit, impedit, soluta repellat voluptatibus amet aliquam error!</p>
+            </div>
+            <br>
+            <div class="container3">
+                <figure>
+                <img class="img" src="image-anne.jpg" alt="Image with Anne">
+                    </figure>
+                    <h2 class="hh">Anne Wallace</h2>
+                    <h3 class="hhh">Verified Buyer</h3>
+                    <p class="para">"Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quibusdam at dolorem! In eum sed voluptatem iure nesciunt, aliquam fugiat tempora asperiores, quae tempore qui ipsum nobis rem dolores possimus?</p>
+                </div>
+        </article>
+    </main>
 </body>
 </html>
