@@ -4,255 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    background-color: white;
-    color:hsl(212, 6%, 44%);
-    font-size: 15px;
-    font-family: 'Poppins',sans-serif;
-    line-height:1.2;
-    min-height: 100vh;
-}
-.header{
-    display: flex;
-    min-height:300px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-}
-.header>.paulet{
-    font-size: 2.2em;
-    padding:3px;
-    margin-left:23px;
-    color:rgb(74, 72, 72);
-    font-weight: normal;
-}
-.header>h1{
-    color:hsl(234, 12%, 34%);
-    font-size:2.2em;
-    padding:3px;
-    font-weight: bold;
-    margin-bottom:25px;
-}
-.paul{
-    font-size:1.2em;
-    text-align: center;
-    margin-left:20px;
-}
-.container{
-    min-height: 100vh;
-    display: grid;
-    grid-template-areas: 'a b c' 'a d c';
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows:auto auto ;
-    grid-gap: 5px;
-}
-.box1{
-    grid-area: a;
-    background-color: rgb(255, 255, 255);
-    margin-top: 140px;
-    margin-left:260px;
-    border-radius: 10px;
-    height:230px;
-    width:320px;
-    border-top: 6px solid hsl(180, 62%, 55%);
-    border-bottom:2px solid gainsboro;
-    border-left:2px solid gainsboro;
-    border-right: 2px solid gainsboro;
-    box-shadow: 2px 4px 13px rgb(182, 180, 180);
-}
-.box1>h1{
-    margin:20px 15px 10px 35px;
-    font-size:1.2em;
-}
-.box1>p{
-    margin:5px 30px 15px 35px;
-    font-size: 0.9em;
-}
-.imageistica
-{
-    display: block;
-    object-fit: cover;
-    width: auto;
-    height: auto;
-    margin:3px 10px 0px 220px;
-}
-.box2{
-    grid-area: b;
-     background-color: rgb(255, 255, 255);
-    margin-left:10px;
-    border-radius: 10px;
-    height:230px;
-    width:320px;
-    border-top: 6px solid hsl(0, 78%, 62%);
-    border-bottom:2px solid gainsboro;
-    border-left:2px solid gainsboro;
-    border-right: 2px solid gainsboro;
-    box-shadow: 2px 4px 13px rgb(182, 180, 180);
-}
-.box2>h1{
-    margin:20px 15px 10px 35px;
-    font-size:1.2em;
-}
-.box2>p{
-    margin:5px 30px 15px 35px;
-    font-size: 0.9em;
-}
-.img{
-    display: block;
-    object-fit: cover;
-    width: auto;
-    height: auto;
-    margin:3px 10px 0px 220px; 
-}
-.box3{
-    grid-area: d;
-     background-color: rgb(255, 255, 255);
-    margin-left:10px;
-    border-radius: 10px;
-    height:230px;
-    width:320px;
-    margin-bottom: 180px;
-    border-top: 6px solid hsl(34, 97%, 64%);
-    border-bottom:2px solid gainsboro;
-    border-left:2px solid gainsboro;
-    border-right: 2px solid gainsboro;
-    box-shadow: 2px 4px 9px rgb(182, 180, 180);
-}
-.box3>h1{
-    margin:20px 15px 10px 35px;
-    font-size:1.2em;
-}
-.box3>p{
-    margin:5px 30px 15px 35px;
-    font-size: 0.9em;
-}
-.imag{
-    display: block;
-   object-fit: cover;
-    width: auto;
-    height: auto;
-    margin:3px 10px 0px 220px;  
-}
-.box4{
-    grid-area: c;
-     background-color: rgb(255, 255, 255);
-    margin-left:27px;
-    margin-top: 140px;
-    border-radius: 10px;
-    height:230px;
-    width:320px;
-    border-top: 6px solid  hsl(212, 86%, 64%);
-    border-bottom:2px solid gainsboro;
-    border-left:2px solid gainsboro;
-    border-right: 2px solid gainsboro;
-    box-shadow: 2px 4px 9px rgb(182, 180, 180);
-}
-.box4>h1{
-    margin:20px 15px 10px 35px;
-    font-size:1.2em;
-}
-.box4>p{
-    margin:5px 30px 15px 35px;
-    font-size: 0.9em;
-}
-.omg{
-    display: block;
-   object-fit: cover;
-    width: auto;
-    height: auto;
-    margin:3px 10px 0px 220px;  
-}
-@media(max-width:750px)
-{
-    
-    body{
-        min-height: 100vh;
-    }
-    .header{
-        width: 100%;
-    }
-    .paul{
-        font-size:0.9em;
-        margin-left:34px;
-        margin-right:20px;
-    }
-    .container{
-        min-height: 100vh;
-        display: grid;
-       grid-template-areas: 'a' 'b' 'c' 'd';
-       grid-template-columns: 1fr;
-       grid-template-rows: repeat(4, auto);
-       grid-gap: 20px;
-    }
-    .box1, .box2, .box3, .box4{
-        width:90%;
-        max-width: 320px;
-    }
-    .box1{
-        grid-area: a;
-        margin:0 auto 20px;
-    }
-    .box2{
-        grid-area: b;
-        margin:0 auto 20px;
-    }
-    .box3{
-        grid-area: c;
-        margin:0 auto 20px;
-    }
-    .box4{
-        grid-area: d;
-        margin:0 auto 20px;
-    }
-    
-}
-</style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed">
 </head>
 <body>
-    <header class="header">
-        <p class="paulet">Reliable, efficient delivery</p>
-        <h1>Powered by Technology</h1>
-        <p class="paul">Our Artificial Intelligence powered tools use millions of project data <br> points to ensure that your project is successful.</p>
-    </header>
     <main class="container">
         <div class="box1">
-            <h1>Supervisor</h1>
-            <p>Monitors activity to identify project roadblocks</p>
-            <figure>
-                <img class="imageistica" src="icon-supervisor.svg" alt="Icon for the first job">
-            </figure>
+            <img src="image-daniel.jpg" alt="Image with Daniel">
+            <h3>Daniel Clifford</h3>
+            <p>Verified Graduate</p>
+            <br>
+            <p>
+                I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.
+            </p>
+            <p>
+                “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+            </p>
         </div>
-        <div class="box2">
-            <h1>Team Builder</h1>
-            <p>Scans our talent network to create the optimal team for your project</p>
-            <figure>
-                <img class="img" src="icon-team-builder.svg" alt="Icon for the builder tech">
-            </figure>
+        <div class="box2" id="Take me here!">
+            <img src="image-jonathan.jpg" alt="Image with Johnny">
+            <h3>Jonathan Walters</h3>
+            <p>Verified Graduate</p>
+            <br>
+            <p>
+                The team was very supportive and kept me motivated
+            </p>
+            <p>
+                “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. ” 
+            </p>
         </div>
         <div class="box3">
-            <h1>Karma</h1>
-            <p>Regularly evaluates our talent to ensure quality</p>    
-            <figure>
-                <img class="imag" src="icon-karma.svg" alt="Icon for karma tech!">
-            </figure>
+            <img src="image-jeanette.jpg" alt="Image with Jeanette">
+            <h3>Jeanette Harmon</h3>
+            <p>Verified Graduate</p>
+            <br>
+            <p>
+              An overall wonderful and rewarding experience  
+            </p>
+            <p>
+                “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. ”
+            </p>
         </div>
         <div class="box4">
-            <h1>Calculator</h1>
+            <img src="image-patrick.jpg" alt="Image with Patrick">
+            <h3>Patrick Abrams</h3>
+            <p>Verified Graduate</p>
+            <br>
             <p>
-                Uses data from past projects to provide better delivery estimates
+                Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.
             </p>
-            <figure>
-                <img class="omg" src="icon-calculator.svg" alt="Icon for calculator">
-            </figure>
+            <p>
+               “ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. ”  
+            </p>
+        </div>
+        <div class="box5">
+            <img src="image-kira.jpg" alt="Image with Kira">
+            <h3>Kira Whittle</h3>
+            <p>Verified Graduate</p>
+            <br>
+            <p>Such a life-changing experience. Highly recommended! </p>
+            <p>“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example of my developent experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! ”</p>
         </div>
     </main>
+   
 </body>
 </html>
