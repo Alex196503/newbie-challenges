@@ -4,275 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        :root{
-              --clr-gradient-start: #ffa399;
-    --clr-gradient-stop: #ff4d97;
-        }
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-        }
-        body{
-            min-width: 100vw;
-            background-color:hsl(229, 57%, 11%);
-            background-image: url('bg-desktop.png');
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-position: -7vh 20vw;
-            background-size:110vw;
-            font-family: 'Raleway', sans-serif;
-            line-height: 1.2;
-            font-size: 14px;
-            min-height: 90vh;
-            color:white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container{
-           max-width: 960px;
-           display: grid;
-           margin-right: 60px;
-           grid-template-areas: 'a b';
-           grid-gap:1em;
-           grid-template-columns: 280px 280px;
-           grid-template-rows: 150px;
-        }
-        .tooltip{
-            position: relative;
-            bottom:110px;
-            left:280px;
-            background-color: white;
-            color:black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width:140px;
-            height:60px;
-            border-radius: 5px;
-        }
-        .tooltip::after{
-            content: '';
-            position: absolute;
-            top:79%;
-            left:97%;
-            border-width: 5px;
-            margin-left:-5px;
-            border:10px solid transparent;
-            border-top-color: white;
-            transform: rotate(226deg);
-
-        }
-        .box1{
-            background-color: hsl(228, 56%, 26%);
-            color:white;
-            grid-area:a;
-            padding:1em;
-            max-width:260px;
-            border-radius: 10px 80px 10px 10px;
-            height:150px;
-        }
-        .box1>img{
-            width:100px;
-            object-fit: cover;
-            object-position: left;
-            margin:15px 15px 10px 20px;
-        }
-        .box2{
-            background-color:hsl(228, 56%, 26%);
-            color:white;
-            width:500px;
-            margin-top: 20px;
-            height: 130px;
-            border-radius: 10px;
-            grid-area:b;
-        }
-        .box2>p{
-            font-size:0.9em;
-            padding:2px;
-            margin:30px 15px 20px 35px;
-            color:hsl(243, 100%, 93%);
-        }
-        .container-fluid{
-            margin:7px 25px 10px 19px;
-            height:auto;
-            width: auto;
-            display: grid;
-            grid-template-areas: 'a b c';
-            grid-template-rows: 20px;
-            grid-gap:17px;
-            grid-template-columns:25px 25px 25px;
-        }
-        .pump{
-            padding:5px;
-            height:20px;
-            margin-left: 5px;
-            width:25px;
-            object-fit: cover;
-            object-position: center;
-            margin-top: 1px;
-            height: fit-content;
-        }
-        .pump2{
-            padding:5px;
-            height:20px;
-            margin-top: 3px;
-            margin-left: 2px;
-            width:30px;
-            object-fit: cover;
-            object-position: center;
-            height: fit-content;
-        }
-        .pump3{
-            padding:5px;
-            height:20px;
-            margin-top: 5px;
-            margin-left:2px;
-            width:31px;
-            object-fit: cover;
-            object-position: center;
-            height: fit-content;
-        }
-        .container-fluid1{
-            grid-area:a;
-            padding:1px;
-            width:34px;
-            border-radius: 8px;
-            height:35px;
-            background-color: hsl(229, 57%, 11%);
-            
-        }
-        .container-fluid2{
-            grid-area:b;
-            padding:1px;
-            width:34px;
-            border-radius: 8px;
-            height:35px;
-            background-color: hsl(229, 57%, 11%);
-        }
-        .container-fluid3{
-            grid-area:c;
-            padding:1px;
-            width:34px;
-            border-radius: 8px;
-            height:35px;
-            background-color: hsl(229, 57%, 11%);
-        }
-        .slidercontainer{
-            position: relative;
-            bottom:70px;
-            left:40px;
-        }
-        .labels{
-            display: grid;
-            grid-template-areas: 'a b';
-            grid-template-rows: auto;
-            grid-template-columns: 340px;
-        }
-        .firstspan{
-            grid-area:a;
-            color:hsl(243, 100%, 93%);
-            font-size:0.8em;
-        }
-        .secondspan{
-            grid-area:b;
-             color:hsl(243, 100%, 93%);
-            font-size:0.8em;
-        }
-        .rangeulet{
-           width:380px;
-           cursor: pointer;
-           -webkit-appearance: none;
-           outline: none;
-           border-radius: 10px;
-           border:2px solid black;
-           background: transparent;
-        }
-        .rangeulet::-webkit-slider-runnable-track{
-            height:12px;
-            border-radius:10px;
-            background:  linear-gradient(to right, var(--clr-gradient-start), var(--clr-gradient-stop)) 0/var(--val, 81.5%) 100% no-repeat,
-    hsl(229, 57%, 11%);
-        }
-
-        .rangeulet::-webkit-slider-thumb{
-            -webkit-appearance: none;
-            background: white;
-            width:15px;
-            height:15px;
-            border-radius:50%;
-            margin-top: -3px;
-            cursor:pointer;
-        }
-        @media(max-width:750px)
-        {
-            body{
-                background-image: url('bg-mobile.png');
-                background-repeat: no-repeat;
-                background-position: -5vh 2vw;
-                min-height: 100vh;
-            }
-            .container{
-                width:100%;
-                max-width:100%;
-                padding:0;
-                display: grid;
-                grid-template-areas: 'a' 'b';
-                grid-template-columns: 1fr;
-                grid-gap:10px;
-            }
-            .box1{
-                grid-area:a;
-                width:100%;
-                margin:0;
-            }
-            .box2{
-                grid-area:b;
-                width:100%;
-                margin:0;
-            }
-            .tooltip{
-                position: relative;
-                left:30%;
-                transform: translateY(140px);
-            }
-            .tooltip::after{
-                content:'';
-                border-radius:14px;
-                border:none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <article class="container">
+    <header class="header">
+        <img src="logo.svg" alt="Icon with logo">
+        <div class="container-fluid">
+            <p class="para1">
+            A history of everything you copy    
+            </p>
+            <p class="para2">
+                Clipboard allows you to track and organize everything you copy. Instantly <br> access your clipboard on all your devices.
+            </p>
+        </div>
+        <div class="container2-fluid">
+            <button type="button">Download for iOS</button>
+            <button type="button">Download for Mac</button>
+        </div>
+    </header>
+    <main class="main">
+        <h2>Keep track of your snippets</h2>
+        <p>Clipboard instantly stores any item you copy in the cloud, meaning you can access <br> your snippets immediately on all your devices. Our Mac and iOS apps will help you <br> organize everything.</p>
         <div class="box1">
-          <img src="logo.svg" alt="Image with the logo">  
-          <div class="container-fluid">
-            <div class="container-fluid1">
-            <img class="pump" src="icon-document.svg" alt="Icon with the document">
-            </div>
-            <div class="container-fluid2">
-            <img class="pump2" src="icon-folder.svg" alt="Icon with the folder">
-            </div>
-            <div class="container-fluid3">
-            <img class="pump3" src="icon-upload.svg" style="padding:6px;" alt="Icon with uploading an file">
-                </div>
+            <img src="image-computer.png" alt="Image with an computer">
+            <article class="article1">
+            <h2>Quick Search</h2>
+            <p>Easily search your snippets by content, <br> category, web address, application, and more.</p>
+            </article>
+            <article class="article2">
+            <h2>iCloud Sync</h2>
+            <p>Instantly saves and syncs snippets across  all <br> your devices.</p>
+            </article>
+            <article class="article3">
+            <h2>Complete History</h2>
+            <p>Retrieve any snippets from the first moment you started using the app.</p>
+            </article>
         </div>
-        </div>
+            <h2 id="h1ulet">Access Clipboard anywhere</h2>
+            <p id="paraulet">Whether you’re on the go, or at your computer, you can access all your Clipboard <br> snippets in a few simple clicks</p>
         <div class="box2">
-            <p>You’ve used <b> 815 GB </b> of your storage</p>
-            <div class="tooltip" ><span style="color:black; font-weight: 700; font-size:2.5em; margin-right: 7px;">185  </span> <span style="color: hsl(229, 7%, 55%); font-size: 0.7em; font-weight: bold;" > GB LEFT </span></div>
-            <div class="slidercontainer">
-            <input class="rangeulet" type="range" id="progress" label="progress" min="0" max="1000" value="815">
-                <div class="labels">
-                    <span class="firstspan"> 0 GB </span>
-                    <span class="secondspan"> 1000 GB </span>
-                </div>
+            <img src="image-devices.png" alt="Snippet with some little devices">
+            <h2> Supercharge your workflow </h2>
+            <p>We’ve got the tools to boost your productivity. </p>
+       
+            <div class="secondarybox">
+            <div class="secondarybox1">
+                <img src="icon-blacklist.svg" alt="Icon with a blacklist">
+                <h2>Create blacklists</h2>
+                <p>Ensure sensitive information never makes  <br> way to your clipboard by excluding certain <br> sources.</p>
+            </div>
+            <div class="secondarybox2">
+                <img src="icon-text.svg" alt="Icon with a text">
+                <h2>Plain text snippets</h2>
+                <p>Remove unwanted formatting from copied text <br> for a consistent look.</p>
+            </div>
+            <div class="secondarybox3">
+              <img src="icon-preview.svg" alt="Icon with an eye">
+              <h2>Sneak preview</h2>
+              <p>Quick preview of all snippets on your Clipboard <br> for easy access. </p>  
+            </div>
+        </div>
+        <aside class="aside">
+            <img src="logo-google.png" alt="Image with the Google Logo">
+            <img src="logo-ibm.png" alt="Image with the IBM Logo">
+            <img src="logo-microsoft.png" alt="Image with the Microsoft logo">
+            <img src="logo-hp.png" alt="Icon with the Hewlett Packard Enterprise">
+            <img src="logo-vector-graphics.png" alt="An icon with a company">
+        </aside>
+        </div>
+        <div class="box3">
+            <h2>Clipboard for iOS and Mac OS</h2>
+            <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud and <br> you’re ready to start adding to your clipboard.</p>
+        <div class="butonase">
+            <button type="button">Download for iOS</button>
+            <button type="button">Download for Mac</button>
         </div>
         </div>
-    </article>
+    </main>
+    <footer class="footer">
+        <img src="logo.svg" alt="SVG with our logo">
+        <div class="footer1">
+        <a href="#">FAQs</a>
+        <a href="#">Contact Us</a>
+        </div>
+        <div class="footer2">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Press Kit</a>
+        </div>
+        <div class="footer3">
+        <a href="#">Install Guide</a>
+        </div>
+        <div class="footer4">
+        <img src="icon-facebook.svg" alt="Icon with facebook logo">
+        <img src="icon-twitter.svg" alt="Icon with twitter logo">
+        <img src="icon-instagram.svg" alt="Icon with instagram logo">
+        </div>
+    </footer>
 </body>
 </html>
